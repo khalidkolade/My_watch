@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Watch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<!--navbar begins-->
+<style>
+                   .scrolling-ticker {
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #1f2937;
+            color: white;
+            padding: 10px 0;
+        }
+        .ticker-content {
+            display: flex;
+            white-space: nowrap;
+            will-change: transform;
+            animation: ticker 30s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+
+        .footer-content {
+            margin-bottom: 60px;
+        }
+     .hover-img img:last-child {
+            display: none;
+        }
+        .hover-img:hover img:first-child {
+            display: none;
+        }
+        .hover-img:hover img:last-child {
+            display: block;
+        }
+        .card:hover .icons {
+                display: flex;
+            }
+            .icons {
+                display: none;
+                
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+         .about-section {
+      background-color: #0d0d0d;
+      color: #f8f8f8;
+    }
+    .highlight {
+      color: #ffc107;
+    }
+    .image-container {
+      border: 8px solid #0d0d0d;
+    }
+    .image-container {
+      border: 8px solid #0d0d0d;
+    }
+    .feature-box:hover {
+            transform: scale(1.05);
+        }
+
+      .hover-gold:hover {
+
+              color: gold;
+          }
+          .group:hover .group-hover\:block {
+              display: block;
+          }
+          .group:hover .group-hover\:flex {
+              display: flex;
+          }
+    @keyframes zoomInOut {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+    }
+    .animate-zoom {
+        animation: zoomInOut 3s infinite;
+    }
+    .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover .details-button {
+      display: block;
+    }
+    .details-button {
+      display: none;
+    }
+    .product-box:hover .icons {
+            display: flex;
+        }
+        
+        .icons {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+ 
+</style>
+<body>
+ <!--navbar start-->
+  <nav class="fixed w-full bg-white  z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-2">
+          <img src="./img/Borcelle__1_-removebg-preview.png" alt="Logo" class="h-20 w-20">
+          <span class="ml-2 text-xl text-black font-extrabold animate-pulse">Alberto Watch</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="text-black hover:text-yellow-500 font-bold">Home</a>
+          <a href="#" class="text-black hover:text-yellow-500 font-bold">About</a>
+          <div class="relative group">
+            <button class="text-black hover:text-yellow-500 font-bold">Product</button>
+            <div class="absolute mt-2 w-48 bg-white text-black rounded shadow-md hidden group-hover:block">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Technology</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Store</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Support</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Sitemap</a>
+            </div>
+          </div>
+          <a href="#" class="text-black font-bold hover:text-yellow-500">Gallery</a>
+          <a href="#" class="text-black font-bold hover:text-yellow-500">Contact us</a>
+        </div>
+        <div class="hidden md:flex items-center">
+          <a href="#" class="text-white bg-black px-4 py-2 rounded-lg hover:bg-yellow-600">Sign Up</a>
+        </div>
+        <div class="md:hidden ml-auto">
+          <button id="nav-toggle" class="text-black focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M3 12.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="nav-content" class="hidden md:hidden bg-white shadow-md">
+      <a href="#" class="block px-4 py-2 text-black  font-bold:text-yellow-500">Home</a>
+      <a href="#" class="block px-4 py-2 text-black font-bold hover:text-yellow-500">About</a>
+      <div class="relative group">
+        <button class="block text-black px-4 py-2 font-bold w-full text-left hover:text-yellow-500">Product</button>
+        <div class="hidden bg-white text-black rounded shadow-md group-hover:block">
+          <a href="#" class="block px-4 py-2 font-bold hover:bg-gray-200">Technology</a>
+          <a href="#" class="block px-4 py-2 font-bold hover:bg-gray-200">Store</a>
+          <a href="#" class="block px-4 py-2 font-bold hover:bg-gray-200">Support</a>
+          <a href="#" class="block px-4 py-2 font-bold hover:bg-gray-200">Sitemap</a>
+        </div>
+      </div>
+      <a href="#" class="block px-4 py-2 text-black font-bold hover:text-yellow-500">Gallery</a>
+      <a href="#" class="block px-4 py-2 text-black font-bold hover:text-yellow-500">Contact us</a>
+      <a href="#" class="block px-4 py-2 mt-2 text-center text-white bg-yellow-500 rounded-lg hover:bg-yellow-600">Sign Up</a>
+    </div>
+  </nav>
+  <!--nav ends-->
+
+    
+      <!-- landing page -->
+       <section class="bg-black text-white">
+        <div class="container mx-auto px-4 py-16">
+          <div class="flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 flex justify-center lg:justify-start mb-8 lg:mb-0 mt-4">
+                <img src="./img/landing_page-removebg-preview.png" alt="Smart Watch" class="w-80 h-auto max-h-96 object-cover rounded-lg shadow-lg transition-transform duration-500 hover:scale-110">
+            </div>
+            
+              <div class="lg:w-1/2 text-center lg:text-left">
+                  <h1 class="text-4xl font-bold mb-4">Experience the Art of Timekeeping Like Never Before</h1>
+                  <p class="text-lg text-gray-400 mb-6">Discover the Perfect Blend of Precision, Style, and Innovation with Our Exquisite Watches</p>
+                  <p class="text-3xl font-semibold mb-4">$499 <span class="text-sm text-gray-500">In stock.</span></p>
+                  <div class="flex justify-center lg:justify-start space-x-4">
+                      <button class="bg-white text-black py-2 px-6 rounded-full">Add to Cart</button>
+                      <button class="bg-black text-white border border-white py-2 px-6 rounded-full">Buy Now</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      
+      <section class="container mx-auto bg-black text-white py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="group relative text-center">
+          <img src="./img/smart.jpg" alt="Heart Rate" class="mx-auto rounded-full border border-gray-600 p-4 group-hover:opacity-50 transition duration-300">
+          <p class="absolute inset-0 flex items-center justify-center text-xl opacity-0 group-hover:opacity-100 transition duration-300">Smart Watch</p>
+          <p class="mt-4 text-xl group-hover:hidden">Smart watch</p>
+        </div>
+        <div class="group relative text-center">
+          <img src="./img/classic.jpg" alt="Sleep Tracking" class="mx-auto rounded-full border border-gray-600 p-4 group-hover:opacity-50 transition duration-300">
+          <p class="absolute inset-0 flex items-center justify-center text-xl opacity-0 group-hover:opacity-100 transition duration-300">Classic</p>
+          <p class="mt-4 text-xl group-hover:hidden">Classic</p>
+        </div>
+        <div class="group relative text-center">
+          <img src="./img/vintage.jpg" alt="Activity Tracking" class="mx-auto rounded-full border border-gray-600 p-4 group-hover:opacity-50 transition duration-300">
+          <p class="absolute inset-0 flex items-center justify-center text-xl opacity-0 group-hover:opacity-100 transition duration-300">Vintage</p>
+          <p class="mt-4 text-xl group-hover:hidden">Vintage</p>
+        </div>
+        <div class="group relative text-center">
+          <img src="./img/luxury.jpg" alt="Swimproof" class="mx-auto rounded-full border border-gray-600 p-4 group-hover:opacity-50 transition duration-300">
+          <p class="absolute inset-0 flex items-center justify-center text-xl opacity-0 group-hover:opacity-100 transition duration-300">Luxury</p>
+          <p class="mt-4 text-xl group-hover:hidden">Luxury</p>
+        </div>
+      </section>
+       </section>
+       <!--landing ends-->
+
+      <!--section -->
+<nav class="text-center py-8 bg-gray-300 text-black ">
+    <h1 class="text-3xl font-bold  ">The Leading Marketplace for Luxury Watches Since 2003</h1>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-8 bg-gray-300">
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105">
+        <img src="./img/c1.svg" alt="Rating" class="mx-auto mb-4">
+        <h2 class="text-2xl font-bold text-gray-800">4.8 out of 5 stars</h2>
+        <p class="text-gray-600">from 159,000 reviews worldwide</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105">
+        <img src="./img/handshake.svg" alt="Users" class="mx-auto mb-4">
+        <h2 class="text-2xl font-bold text-gray-800">9 million</h2>
+        <p class="text-gray-600">watch enthusiasts use our platform each month</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105">
+        <img src="./img/love-my-watch.svg" alt="Protection" class="mx-auto mb-4">
+        <h2 class="text-2xl font-bold text-gray-800">Over 200,000</h2>
+        <p class="text-gray-600">customers choose Buyer Protection annually</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105">
+        <img src="./img/dealer.svg" alt="Sellers" class="mx-auto mb-4">
+        <h2 class="text-2xl font-bold text-gray-800">More than 25,000</h2>
+        <p class="text-gray-600">trustworthy sellers</p>
+    </div>
+</div>
+</nav>
+<!--section ends-->
+
+<!--hover-->
+<section class="min-h-screen bg-gray-100 p-8">
+    <div class="w-full bg-white shadow-lg rounded-lg overflow-hidden">
+      <div class="bg-black text-white text-center p-4">
+        <h1 class="text-5xl font-extrabold">Luxury Watches</h1>
+      </div>
+      <div class="p-6">
+        <div class="text-center mb-6">
+          <h2 class="text-2xl font-bold text-gray-700">Classic Collection</h2>
+          <p class="text-gray-600 mt-2">Experience the timeless elegance of our classic watch collection.</p>
+        </div>
+        <div class="flex justify-center">
+          <button class="bg-[#D4AF37] text-black px-4 py-2 rounded-lg shadow">Shop Now</button>
+        </div>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-gray-700 p-4 rounded-lg text-white card relative">
+            <img src="./img/emer3.jpg" alt="Watch" class="w-full h-48 object-cover rounded-lg">
+            <h3 class="text-lg font-bold mt-2 text-center">Men Watches</h3>
+            <p class="text-[#D4AF37] text-center">$250.00</p>
+            <button class="details-button bg-black text-white px-4 py-2 rounded-lg shadow mt-2 w-full">View Details</button>
+          </div>
+          <div class="bg-gray-700 p-4 rounded-lg text-white card relative">
+            <img src="./img/emer1.jpg" alt="Watch" class="w-full h-48 object-cover rounded-lg">
+            <h3 class="text-lg font-bold mt-2 text-center">Pre-Owned Watches</h3>
+            <p class="text-[#D4AF37] text-center">$300.00</p>
+            <button class="details-button bg-black text-white px-4 py-2 rounded-lg shadow mt-2 w-full">View Details</button>
+          </div>
+          <div class="bg-gray-700 p-4 rounded-lg text-white card relative">
+            <img src="./img/classic.jpg" alt="Watch" class="w-full h-48 object-cover rounded-lg">
+            <h3 class="text-lg font-bold mt-2 text-center">Classic watches</h3>
+            <p class="text-[#D4AF37] text-center">$450.00</p>
+            <button class="details-button bg-black text-white px-4 py-2 rounded-lg shadow mt-2 w-full">View Details</button>
+          </div>
+          <div class="bg-gray-700 p-4 rounded-lg text-white card relative">
+            <div class="w-full h-48">
+              <img src="./img/women watches.jpg" alt="Watch" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <h3 class="text-lg font-bold mt-2 text-center">Women Watches</h3>
+            <p class="text-[#D4AF37] text-center">$450.00</p>
+            <button class="details-button bg-black text-white px-4 py-2 rounded-lg shadow mt-2 w-full">View Details</button>
+          </div>
+          
+          <div class="bg-gray-700 p-4 rounded-lg text-white card relative">
+            <img src="./img/emergency2.jpg" alt="Watch" class="w-full h-48 object-cover rounded-lg">
+            <h3 class="text-lg font-bold mt-2 text-center">carier Watches</h3>
+            <p class="text-[#D4AF37] text-center">$450.00</p>
+            <button class="details-button bg-black text-white px-4 py-2 rounded-lg shadow mt-2 w-full">View Details</button>
+          </div>
+          <div class="bg-gray-700 p-4 rounded-lg text-white card relative">
+            <img src="./img/pocket-removebg-preview.png" alt="Watch" class="w-full h-48 object-cover rounded-lg">
+            <h3 class="text-lg font-bold mt-2 text-center">Pocket Watches</h3>
+            <p class="text-[#D4AF37] text-center">$450.00</p>
+            <button class="details-button bg-black text-white px-4 py-2 rounded-lg shadow mt-2 w-full">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center hidden">
+      <div class="bg-gray-800 text-white rounded-lg shadow-lg p-4 w-80">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-semibold">Watch Details</h2>
+          <span id="close-popup" class="cursor-pointer">&times;</span>
+        </div>
+        <div class="flex items-center mb-4">
+          <img id="popup-img" src="./img/" alt="Watch" class="w-20 h-20 object-cover rounded-lg mr-4">
+          <div>
+            <div id="popup-title" class="font-semibold text-lg">Watch Title</div>
+            <div id="popup-price" class="text-[#D4AF37]">$0.00</div>
+          </div>
+        </div>
+        <div id="popup-description" class="text-gray-400 text-sm mb-4">
+          Discover the exceptional features and specifications of our latest watch. Crafted to perfection, this timepiece blends cutting-edge technology with timeless design, making it a must-have addition to your collection.
+        </div>
+        <button class="bg-black hover:bg-green-600 text-white font-semibold py-2 px-4 rounded w-full">Add to Wishlist</button>
+      </div>
+    </div>
+</section>
+  <!--hover section-->
+
+      <!--about section -->
+      <section class="bg-gray-100 text-gray-800">
+        <nav class="bg-gray-100 text-gray-800 py-4">
+          <div class="container mx-auto px-6">
+            <h1 class="text-5xl font-extrabold text-center text-black">About Us</h1>
+            <h3 class="text-lg text-center  italic text-3xl mt-2">Crafting Timeless Pieces with Passion and Precision</h3>
+          </div>
+        </nav>
+        <nav class="bg-black text-white">
+            <div class="container mx-auto px-4 py-6">
+                <div class="flex flex-col md:flex-row items-center md:items-start">
+                    <div class="w-full md:w-1/2 p-4">
+                        <img src="./img/a3-removebg-preview.png" alt="Watch Image" class="w-full h-auto rounded-lg">
+                    </div>
+                    <div class="w-full md:w-1/2 p-4">
+                        <h2 class="text-4xl font-bold highlight text-yellow-500 mb-4">About Us</h2>
+                        <p class="mb-4">
+                            Founded in 2020, Alberto Watch Company has been crafting timeless pieces that combine tradition and innovation. Our dedication to craftsmanship and quality ensures each watch is a work of art, designed to last generations.
+                        </p>
+                        <p class="mb-4">
+                            Each of our watches is meticulously crafted using the finest materials and the latest technology. From classic designs to modern innovations, we offer a wide range of styles to suit every taste.
+                        </p>
+                        <div class="mb-4">
+                            <p>Phone: +234 90 2057 5004</p>
+                            <p>Email: Bh-CINDIGO@gmail.com</p>
+                            <p>Address: 123 Jojuu Street, Ogun, Nigeria</p>
+                        </div>
+                        <a href="#" class="inline-block bg-yellow-500 text-black px-6 py-2 rounded-full hover:bg-yellow-600 transition duration-300">For further enquiries</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+      </section>
+        <!--about ends-->
+
+        <!--uniqueness-->
+        <section class="bg-gray-100 py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Some Features that Make Us Unique</h2>
+                <p class="text-center text-gray-600 mb-8">Discover the incredible features that set us apart from the competition and make our products truly unique.</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform transition duration-500 feature-box">
+                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/icons/award.svg" class="mx-auto mb-4 w-12 h-12" alt="Quality Icon">
+                        <h3 class="text-xl font-semibold mb-2">Exceptional Quality</h3>
+                        <p class="text-gray-600">Our products are made from the finest materials to ensure top-notch quality and durability.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform transition duration-500 feature-box">
+                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/icons/gem.svg" class="mx-auto mb-4 w-12 h-12" alt="Craftsmanship Icon">
+                        <h3 class="text-xl font-semibold mb-2">Exquisite Craftsmanship</h3>
+                        <p class="text-gray-600">Each item is meticulously crafted by skilled artisans, ensuring a unique and beautiful finish.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform transition duration-500 feature-box">
+                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/icons/layers.svg" class="mx-auto mb-4 w-12 h-12" alt="Innovation Icon">
+                        <h3 class="text-xl font-semibold mb-2">Innovative Design</h3>
+                        <p class="text-gray-600">We incorporate the latest design trends and technologies to bring you cutting-edge products.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform transition duration-500 feature-box">
+                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/icons/diamond.svg" class="mx-auto mb-4 w-12 h-12" alt="Luxury Icon">
+                        <h3 class="text-xl font-semibold mb-2">Luxury Materials</h3>
+                        <p class="text-gray-600">Our commitment to using only the finest luxury materials ensures that our products are of the highest quality.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform transition duration-500 feature-box">
+                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/icons/hourglass-split.svg" class="mx-auto mb-4 w-12 h-12" alt="Aesthetics Icon">
+                        <h3 class="text-xl font-semibold mb-2">Timeless Aesthetics</h3>
+                        <p class="text-gray-600">Our designs are timeless, blending classic beauty with modern elegance to create pieces that never go out of style.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform transition duration-500 feature-box">
+                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/icons/speedometer.svg" class="mx-auto mb-4 w-12 h-12" alt="Performance Icon">
+                        <h3 class="text-xl font-semibold mb-2">High Performance</h3>
+                        <p class="text-gray-600">Engineered for superior performance, our products deliver exceptional functionality and reliability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--unique ends-->
+
+        <!--testimonial-->
+        <section class="bg-gray-900 text-white">
+            <nav class="py-12 px-6">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold">What thousands of happy customers are saying about us</h2>
+                    <div class="mt-4">
+                        <div class="flex items-center justify-center">
+                            <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="TrustScore Icon">
+                            <p class="ml-2">TrustScore: <span class="font-semibold">"Excellent" with 4.8/5 stars</span></p>
+                        </div>
+                        <p class="mt-2">159,160 reviews from around the globe</p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:justify-center lg:space-x-4 space-y-4 lg:space-y-0">
+                    <div class="bg-white text-gray-900 rounded-lg p-6 w-full lg:w-80">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                            </div>
+                            <span>This week</span>
+                        </div>
+                        <p class="mt-4 italic">"Alberto Watch is a reliable, trustable, and professional site where the vendors are strictly reviewed to provide great customer experience at all time."</p>
+                        <div class="flex items-center mt-4">
+                            <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
+                                <span class="text-lg font-bold text-gray-900">B</span>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-semibold">Bh-CINDIGO</p>
+                                <p class="text-sm text-gray-600">Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white text-gray-900 rounded-lg p-6 w-full lg:w-80">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                            </div>
+                            <span>2023</span>
+                        </div>
+                        <p class="mt-4 italic">"Alber is a reliable, trustable, and professional site where the vendors are strictly reviewed to provide great customer experience at all time."</p>
+                        <div class="flex items-center mt-4">
+                            <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
+                                <span class="text-lg font-bold text-gray-900">K</span>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-semibold">KayKay</p>
+                                <p class="text-sm text-gray-600">United States of America</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white text-gray-900 rounded-lg p-6 w-full lg:w-80">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center space-x-1">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                                <img src="https://img.icons8.com/material-sharp/24/26e07f/star.png" alt="Star">
+                            </div>
+                            <span>This Month</span>
+                        </div>
+                        <p class="mt-4 italic">"Bought two watches recently and great experience with Chrono24 and approved dealers in their platform. I feel save buying thru Chrono24 luxury watches."</p>
+                        <div class="flex items-center mt-4">
+                            <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center">
+                                <span class="text-lg font-bold text-gray-900">L</span>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-semibold">Lamine</p>
+                                <p class="text-sm text-gray-600">Spain</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        
+        <!--testimonial ends-->
+
+        <!--collections-->
+        <script>
+            const buttonImages = [
+                {
+                    main: ['./img/smart.jpg', './img/smart2.jpg', './img/smart3.jpg'],
+                    hover: ['./img/ss4.jpg', './img/ss5.jpg', './img/vintage.jpg'],
+                    label: "Button 1"
+                },
+                {
+                    main: ['./img/l1.jpg', './img/l2.jpg', './img/l3.jpg'],
+                    hover: ['./img/l6].jpg', './img/l5.jpg', './img/l4.jpg'],
+                    label: "Button 2"
+                },
+                {
+                    main: ['./img/pa1.jpg', './img/pa2.jpg', './img/pa3.jpg'],
+                    hover: ['./img/pa4.jpg', './img/pa5.jpg', './img/pa6.jpg'],
+                    label: "Button 3"
+                }
+            ];
+    
+            let currentButton = 0;
+    
+            function loadMore() {
+                const newCards = `
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <div class="hover-img">
+                            <img src="${buttonImages[currentButton].main[0]}" alt="Watch 4" class="w-full h-64 object-cover">
+                            <img src="${buttonImages[currentButton].hover[0]}" alt="Watch 4 Hover" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h2 class="text-xl font-bold mb-2">Modern Chic</h2>
+                            <p class="text-gray-700">$249.99</p>
+                            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <div class="hover-img">
+                            <img src="${buttonImages[currentButton].main[1]}" alt="Watch 5" class="w-full h-64 object-cover">
+                            <img src="${buttonImages[currentButton].hover[1]}" alt="Watch 5 Hover" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h2 class="text-xl font-bold mb-2">Vintage Glamour</h2>
+                            <p class="text-gray-700">$349.99</p>
+                            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <div class="hover-img">
+                            <img src="${buttonImages[currentButton].main[2]}" alt="Watch 6" class="w-full h-64 object-cover">
+                            <img src="${buttonImages[currentButton].hover[2]}" alt="Watch 6 Hover" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h2 class="text-xl font-bold mb-2">Elegant Timepiece</h2>
+                            <p class="text-gray-700">$279.99</p>
+                            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('card-section').innerHTML += newCards;
+            }
+    
+            function changeImages(buttonIndex) {
+                currentButton = buttonIndex;
+                const images = document.querySelectorAll('.hover-img img:first-child');
+                images.forEach((img, index) => {
+                    img.src = buttonImages[buttonIndex].main[index];
+                });
+                const hoverImages = document.querySelectorAll('.hover-img img:last-child');
+                hoverImages.forEach((img, index) => {
+                    img.src = buttonImages[buttonIndex].hover[index];
+                });
+            }
+        </script>
+        <nav class="bg-gray-100 text-gray-800">
+            <div class="container mx-auto p-6">
+                <!-- Heading Section -->
+                <header class="mb-8">
+                    <h1 class="text-5xl font-extrabold text-center">Watches Collection</h1>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <button onclick="changeImages(0)" class="bg-gray-200 text-gray-800 font-bold px-4 py-2 rounded hover:bg-gray-300">Smart</button>
+                        <button onclick="changeImages(1)" class="bg-gray-200 text-gray-800 font-bold px-4 py-2 rounded hover:bg-gray-300">Luxury</button>
+                        <button onclick="changeImages(2)" class="bg-gray-200 text-gray-800 font-bold px-4 py-2 rounded hover:bg-gray-300">Vintage</button>
+                    </div>
+                </header>
+    
+                <!-- Card Section -->
+                <div id="card-section" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <div class="hover-img">
+                            <img src="./img/l1.jpg" alt="Watch 1" class="w-full h-64 object-cover">
+                            <img src="./img/l2.jpg" alt="Watch 1 Hover" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h2 class="text-xl font-bold mb-2">Heritage Elegance</h2>
+                            <p class="text-gray-700">$399.99</p>
+                            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <div class="hover-img">
+                            <img src="./img/ss4.jpg" alt="Watch 2" class="w-full h-64 object-cover">
+                            <img src="./img/check2.jpg" alt="Watch 2 Hover" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h2 class="text-xl font-bold mb-2">Retro Prestige</h2>
+                            <p class="text-gray-700">$299.99</p>
+                            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <div class="hover-img">
+                            <img src="./img/pa4.jpg" alt="Watch 3" class="w-full h-64 object-cover">
+                            <img src="./img/pa5.jpg" alt="Watch 3 Hover" class="w-full h-64 object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h2 class="text-xl font-bold mb-2">Classic Legacy</h2>
+                            <p class="text-gray-700">$199.99</p>
+                            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Load More Button -->
+                <div class="text-center mt-8">
+                    <button onclick="loadMore()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-green-700">Load More</button>
+                </div>
+            </div>
+        </nav>
+        <!--collection ends-->
+
+        <!--new arrivals-->
+        <section class="min-h-screen bg-gray-100 p-8">
+            <div class="w-full bg-white shadow-lg rounded-lg overflow-hidden">
+              <div class="container mx-auto text-center">
+                <h1 class="text-4xl font-bold mb-4">Welcome to Our Premium Watch Boutique</h1>
+                <p class="text-lg">Discover our exclusive range of watches and beyond.</p>
+              </div>
+              <div class="p-6">
+                <div id="collection" class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div class="bg-white border border-black p-4 rounded-lg text-black card relative">
+                    <img src="./img/a1-removebg-preview.png" alt="Watch" class="w-full h-64 object-cover rounded-lg">
+                    <div class="p-4">
+                      <h3 class="text-lg font-semibold mb-2">Panerai Luminor</h3>
+                      <p class="text-gray-700 mb-4">$29.99</p>
+                      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+                    </div>
+                    <div class="icons bg-white p-2 rounded-lg absolute top-2 right-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/heart.svg" alt="Heart Icon" width="24" height="24" class="mb-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/share.svg" alt="Share Icon" width="24" height="24" class="mb-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/cart.svg" alt="Cart Icon" width="24" height="24" class="mb-2" onclick="addToCart()">
+                    </div>
+                  </div>
+                  <div class="bg-white border border-black p-4 rounded-lg text-black card relative">
+                    <img src="./img/bg.jpg" alt="Watch" class="w-full h-64 object-cover rounded-lg">
+                    <div class="p-4">
+                      <h3 class="text-lg font-semibold mb-2">Audemars Piguet Royal Oak</h3>
+                      <p class="text-gray-700 mb-4">$29.99</p>
+                      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+                    </div>
+                    <div class="icons bg-white p-2 rounded-lg absolute top-2 right-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/heart.svg" alt="Heart Icon" width="24" height="24" class="mb-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/share.svg" alt="Share Icon" width="24" height="24" class="mb-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/cart.svg" alt="Cart Icon" width="24" height="24" class="mb-2" onclick="addToCart()">
+                    </div>
+                  </div>
+                  <div class="bg-white border border-black p-4 rounded-lg text-black card relative">
+                    <img src="./img/a3-removebg-preview.png" alt="Watch" class="w-full h-64 object-cover rounded-lg">
+                    <div class="p-4">
+                      <h3 class="text-lg font-semibold mb-2">Patek Philippe</h3>
+                      <p class="text-gray-700 mb-4">$29.99</p>
+                      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+                    </div>
+                    <div class="icons bg-white p-2 rounded-lg absolute top-2 right-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/heart.svg" alt="Heart Icon" width="24" height="24" class="mb-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/share.svg" alt="Share Icon" width="24" height="24" class="mb-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/cart.svg" alt="Cart Icon" width="24" height="24" class="mb-2" onclick="addToCart()">
+                    </div>
+                  </div>
+                </div>
+                <div id="more-collection" class="hidden mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div class="bg-white border border-black p-4 rounded-lg text-black card relative">
+                    <img src="./img/bg.jpg" alt="Watch" class="w-full h-64 object-cover rounded-lg">
+                    <div class="p-4">
+                      <h3 class="text-lg font-semibold mb-2">Patek Philippe</h3>
+                      <p class="text-gray-700 mb-4">$29.99</p>
+                      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+                    </div>
+                    <div class="icons bg-white p-2 rounded-lg absolute top-2 right-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/heart.svg" alt="Heart Icon" width="24" height="24" class="mb-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/share.svg" alt="Share Icon" width="24" height="24" class="mb-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/cart.svg" alt="Cart Icon" width="24" height="24" class="mb-2" onclick="addToCart()">
+                    </div>
+                  </div>
+                  <div class="bg-white border border-black p-4 rounded-lg text-black card relative">
+                    <img src="./img/l4.jpg" alt="Watch" class="w-full h-64 object-cover rounded-lg">
+                    <div class="p-4">
+                      <h3 class="text-lg font-semibold mb-2">Patek Philippe</h3>
+                      <p class="text-gray-700 mb-4">$29.99</p>
+                      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+                    </div>
+                    <div class="icons bg-white p-2 rounded-lg absolute top-2 right-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/heart.svg" alt="Heart Icon" width="24" height="24" class="mb-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/share.svg" alt="Share Icon" width="24" height="24" class="mb-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/cart.svg" alt="Cart Icon" width="24" height="24" class="mb-2" onclick="addToCart()">
+                    </div>
+                  </div>
+                  <div class="bg-white border border-black p-4 rounded-lg text-black card relative">
+                    <img src="./img/l6].jpg" alt="Watch" class="w-full h-64 object-cover rounded-lg">
+                    <div class="p-4">
+                      <h3 class="text-lg font-semibold mb-2">Patek Philippe</h3>
+                      <p class="text-gray-700 mb-4">$29.99</p>
+                      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+                    </div>
+                    <div class="icons bg-white p-2 rounded-lg absolute top-2 right-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/heart.svg" alt="Heart Icon" width="24" height="24" class="mb-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/share.svg" alt="Share Icon" width="24" height="24" class="mb-2">
+                      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/cart.svg" alt="Cart Icon" width="24" height="24" class="mb-2" onclick="addToCart()">
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center mt-6">
+                  <button id="show-more-btn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-green-700">Show More</button>
+                </div>
+              </div>
+            </div>
+            <script>
+              document.getElementById('show-more-btn').addEventListener('click', function() {
+                var moreCollection = document.getElementById('more-collection');
+                moreCollection.classList.toggle('hidden');
+                this.textContent = moreCollection.classList.contains('hidden') ? 'Show More' : 'Show Less';
+              });
+            </script>
+          </section>
+          
+        <!--new arrivals ends-->
+
+        <!--technology-->
+        <section class="bg-gray-900 text-white">
+            <div class="container mx-auto py-16">
+              <h2 class="text-4xl font-bold text-center mb-8">Cutting-edge technology</h2>
+              <p class="text-center mb-12">Explore the state-of-the-art technology driving our timepieces.</p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg transform transition duration-500 feature-box">
+                  <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/icons/cpu.svg" alt="Icon" class="w-12 h-12 mb-4">
+                  <h3 class="text-2xl font-semibold mb-2">Precision Engineering</h3>
+                  <p class="text-gray-700">Crafted with the finest materials to ensure the highest level of performance.</p>
+                </div>
+                <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg transform transition duration-500 feature-box">
+                  <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/icons/gear.svg" alt="Icon" class="w-12 h-12 mb-4">
+                  <h3 class="text-2xl font-semibold mb-2">Advanced Materials</h3>
+                  <p class="text-gray-700">Utilizing cutting-edge technology to deliver outstanding results.</p>
+                </div>
+                <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg transform transition duration-500 feature-box">
+                  <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/icons/shield.svg" alt="Icon" class="w-12 h-12 mb-4">
+                  <h3 class="text-2xl font-semibold mb-2">Safety Standards</h3>
+                  <p class="text-gray-700">Ensuring maximum protection and durability in all conditions.</p>
+                </div>
+                <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg transform transition duration-500 feature-box">
+                  <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/icons/water.svg" alt="Icon" class="w-12 h-12 mb-4">
+                  <h3 class="text-2xl font-semibold mb-2">Water Resistance</h3>
+                  <p class="text-gray-700">Built to withstand exposure to water without compromising performance.</p>
+                </div>
+                <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg transform transition duration-500 feature-box">
+                  <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/icons/lightning.svg" alt="Icon" class="w-12 h-12 mb-4">
+                  <h3 class="text-2xl font-semibold mb-2">Energy Efficiency</h3>
+                  <p class="text-gray-700">Optimized to consume less power while delivering top-notch performance.</p>
+                </div>
+                <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg transform transition duration-500 feature-box">
+                  <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/icons/speedometer.svg" alt="Icon" class="w-12 h-12 mb-4">
+                  <h3 class="text-2xl font-semibold mb-2">High Performance</h3>
+                  <p class="text-gray-700">Engineered to achieve the highest speed and efficiency in its class.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+<!--tecnology ends-->
+
+<!--customer support-->
+<section class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="max-w-7xl w-full mx-auto p-8 bg-white shadow-md rounded-lg transform -translate-y-10">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-extrabold text-gray-800">Customer Support</h2>
+        <p class="text-gray-600">We're here to help you with any questions or concerns.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Email Support -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg shadow">
+          <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/envelope.svg" alt="Email Icon" class="w-12 h-12 mb-4">
+          <h3 class="text-xl font-semibold text-gray-700 mb-2">Email Support</h3>
+          <p class="text-gray-600 mb-4">Reach out to us via email at:</p>
+          <a href="mailto:oladosukhalid18@gmail.com" class="text-blue-500 underline">oladosukhalid18@gmail.com</a>
+        </div>
+        <!-- Phone Support -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg shadow">
+          <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/telephone.svg" alt="Phone Icon" class="w-12 h-12 mb-4">
+          <h3 class="text-xl font-semibold text-gray-700 mb-2">Phone Support</h3>
+          <p class="text-gray-600 mb-4">Give us a call at:</p>
+          <a href="tel:+2349020575004" class="text-blue-500 underline">+234 9020575004</a>
+        </div>
+        <!-- Live Chat -->
+        <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg shadow">
+          <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/chat.svg" alt="Chat Icon" class="w-12 h-12 mb-4">
+          <h3 class="text-xl font-semibold text-gray-700 mb-2">Live Chat</h3>
+          <p class="text-gray-600 mb-4">Start a live chat with us:</p>
+          <a href="https://example.com/livechat" class="text-blue-500 underline">Start Live Chat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!--customer support ends-->
+<!--galery-->
+
+
+
+    <header class="text-center py-16 bg-white text-black">
+        <h1 class="text-4xl font-bold mb-4">Timeless Elegance: Explore the Alberto Gallery</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Welcome to our exquisite gallery showcasing craftsmanship and timeless elegance. The Alberto Gallery offers a curated collection of artwork designed for those who appreciate fine artistry and design.
+        </p>
+    </header>
+
+
+    
+
+<div class="grid gap-4 bg-black">
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="">
+    </div>
+    <div class="grid grid-cols-5 gap-4">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./img/ss5.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./img/smart3.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./img/l4.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./img/l2.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="./img/classic.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+  <!--gallery ends-->
+
+  <!--footer-->
+  <div class="bg-gray-200 py-10">
+    <header class="w-[85%] mx-auto mb-10">
+        <h1 class="text-4xl font-semibold text-center">Contact Us and Log In</h1>
+    </header>
+    <div class="flex flex-col md:flex-row gap-5 my-0 mx-auto w-[85%]">
+        <div class="bg-white px-8 py-10 rounded-md sm:w-[50%]">
+            <h1 class="text-4xl font-semibold">Contact Details</h1>
+            <p class="border-b border-black py-5 text-gray-400">
+                You can give us a call, drop us an email or book a one-to-one
+                appointment, we are here to help you and detangle your journey.
+            </p>
+            <div class="flex gap-4 items-center my-5">
+                <div class="h-14 w-14 rounded-full flex justify-center items-center bg-blue-200">
+                    <img src="https://icons.getbootstrap.com/assets/icons/geo-alt.svg" alt="location" class="h-6 w-6">
+                </div>
+                <h1><a href="#" class="font-bold">8, ijoko, egan, ogun state.</a></h1>
+            </div>
+            <div class="flex gap-4 items-center">
+                <div class="h-14 w-14 rounded-full flex justify-center items-center bg-blue-200">
+                    <img src="https://icons.getbootstrap.com/assets/icons/telephone.svg" alt="phone" class="h-6 w-6">
+                </div>
+                <h1><a href="#" class="font-bold">09020575004</a></h1>
+            </div>
+            <div class="flex gap-4 items-center my-5">
+                <div class="h-14 w-14 rounded-full flex justify-center items-center bg-blue-200">
+                    <img src="https://icons.getbootstrap.com/assets/icons/envelope.svg" alt="email" class="h-6 w-6">
+                </div>
+                <h1><a href="#" class="font-bold">Bh-Cindigo</a></h1>
+            </div>
+            <div class="flex gap-4 items-center">
+                <div class="h-14 w-14 rounded-full flex justify-center items-center bg-blue-200">
+                    <img src="https://icons.getbootstrap.com/assets/icons/clock.svg" alt="hours" class="h-6 w-6">
+                </div>
+                <h1 class="font-bold">9am - 9pm</h1>
+            </div>
+        </div>
+        <section id="contact" class="bg-gray-800 flex flex-col items-center justify-center py-8 sm:w-[50%]">
+            <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg mx-4 mb-8">
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">Log in</h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                        <input type="email" id="email" name="email"
+                            class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            required>
+                    </div>
+                    <div class="mb-4 relative">
+                        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                        <input type="password" id="password" name="password"
+                            class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            required>
+                        <img src="https://icons.getbootstrap.com/assets/icons/eye.svg" alt="show"
+                            class="absolute top-1/2 right-3 transform -translate-y-1/2 h-5 w-5 text-gray-500 cursor-pointer">
+                    </div>
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center">
+                            <input id="stay-logged-in" name="stay-logged-in" type="checkbox"
+                                class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                            <label for="stay-logged-in" class="ml-2 block text-sm text-gray-900">Stay logged in</label>
+                        </div>
+                        <div>
+                            <a href="#" class="text-sm text-gray-900 hover:text-indigo-500">Forgot your password?</a>
+                        </div>
+                    </div>
+                    <button type="submit"
+                        class="w-full py-3 bg-gray-900 text-white rounded-md hover:bg-blue-900 transition duration-150">
+                        Log in
+                    </button>
+                </form>
+                <div class="mt-6 flex items-center justify-center">
+                    <div class="w-full border-t border-gray-300"></div>
+                    <span class="px-2 text-sm text-gray-500">OR</span>
+                    <div class="w-full border-t border-gray-300"></div>
+                </div>
+                <div class="mt-6">
+                    <button
+                        class="w-full flex items-center justify-center py-3 mb-4 border border-gray-300 rounded-md hover:bg-gray-50 transition duration-150">
+                        <img src="https://icons.getbootstrap.com/assets/icons/google.svg" alt="Google" class="h-5 w-5 mr-2">
+                        Continue with Google
+                    </button>
+                    <button
+                        class="w-full flex items-center justify-center py-3 border border-gray-300 rounded-md hover:bg-gray-50 transition duration-150">
+                        <img src="https://icons.getbootstrap.com/assets/icons/apple.svg" alt="Apple" class="h-5 w-5 mr-2">
+                        Continue with Apple
+                    </button>
+                </div>
+                <div class="mt-6 text-center">
+                    <p class="text-sm text-gray-900">New to Alberto? <a href="#"
+                            class="text-gray-900 hover:text-indigo-500">Create a free account now</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+    <!-- Find Us Section -->
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl mx-auto my-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h2 class="text-2xl font-bold mb-6 text-gray-900">Find Us</h2>
+                <div class="mb-4">
+                    <label for="search-location" class="block text-sm font-medium text-gray-700">Search Location</label>
+                    <input type="text" id="search-location" name="search-location"
+                        class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                        required>
+                    <button type="button" onclick="searchLocation()"
+                        class="mt-3 w-full py-3 bg-gray-900 text-white rounded-md hover:bg-blue-900 transition duration-150">Search
+                        Location</button>
+                </div>
+                <div class="mb-4">
+                    <label for="search-zipcode" class="block text-sm font-medium text-gray-700">Search by Zip Code</label>
+                    <input type="text" id="search-zipcode" name="search-zipcode"
+                        class="mt-1 block w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                        required>
+                    <button type="button" onclick="searchLocation()"
+                        class="mt-3 w-full py-3 bg-gray-900 text-white rounded-md hover:bg-blue-900 transition duration-150">Search
+                        Zip Code</button>
+                </div>
+            </div>
+            <div class="relative h-80">
+                <iframe class="absolute inset-0 w-full h-full rounded-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63399.971683274765!2d3.1658065216796807!3d6.708883700000023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b995b41b7dd6d%3A0xb6c08985374e0e09!2sAptech%20Computer%20Education%20-Sango%20Ota!5e0!3m2!1sen!2sng!4v1720633001851!5m2!1sen!2sng"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" frameborder="0" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    
+    <div class="bg-gray-900 text-white py-8 footer-content">
+        <div class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Buy on Alberto</h3>
+                <ul>
+                    <li class="mb-2">Alberto Buyer Protection</li>
+                    <li class="mb-2">Payment via an escrow account</li>
+                    <li class="mb-2">Commitment to Authenticity</li>
+                    <li class="mb-2">Easy Returns</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Sell on Alberto</h3>
+                <ul>
+                    <li class="mb-2">Selling Watches as a Private Seller</li>
+                    <li class="mb-2">Selling Watches Commercially</li>
+                    <li class="mb-2">Free Appraisal</li>
+                    <li class="mb-2">Advice for private sellers</li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                <h2 class="text-lg font-semibold mb-4">Sitemap</h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/arrow-right.svg" alt="Arrow Icon" class="w-4 h-4 mr-2">
+                        <a href="#" class="hover:text-gray-300">Home</a>
+                    </li>
+                    <li class="flex items-center">
+                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/arrow-right.svg" alt="Arrow Icon" class="w-4 h-4 mr-2">
+                        <a href="#" class="hover:text-gray-300">About Us</a>
+                    </li>
+                    <li class="flex items-center">
+                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/arrow-right.svg" alt="Arrow Icon" class="w-4 h-4 mr-2">
+                        <a href="#" class="hover:text-gray-300">Services</a>
+                    </li>
+                    <li class="flex items-center">
+                        <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/arrow-right.svg" alt="Arrow Icon" class="w-4 h-4 mr-2">
+                        <a href="#" class="hover:text-gray-300">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Personalized support</h3>
+                <p class="mb-2"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/telephone.svg" alt="Phone" class="inline w-4 h-4 mr-2"> +90 20 57 5004</p>
+                <ul>
+                    <li class="mb-2">Frequently Asked Questions</li>
+                    <li class="mb-2">Contact</li>
+                    <li class="mb-2">Accessibility</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-xl font-semibold mb-4">Chrono24 Apps</h2>
+                <div class="flex items-center space-x-4">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example" alt="QR Code" class="w-32 h-32">
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                        <a href="https://www.apple.com/app-store/" target="_blank">
+                            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" class="h-12">
+                        </a>
+                        <a href="https://play.google.com/store" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-12">
+                        </a>
+                    </div>
+                </div>
+                <h3 class="text-lg font-semibold mb-4">Payment Methods</h3>
+                <div class="flex space-x-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" class="h-10">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard" class="h-10">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="American Express" class="h-10">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" class="h-10">
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-8 border-t border-gray-700 pt-4 text-sm text-gray-400">
+            <div class="flex flex-col sm:flex-row justify-between">
+                <div class="mb-2 sm:mb-0">
+                    <a href="#" class="mr-4 hover:underline">Data Privacy Policy</a>
+                    <a href="#" class="mr-4 hover:underline">Manage Cookies</a>
+                    <a href="#" class="mr-4 hover:underline">Terms & Conditions</a>
+                    <a href="#" class="hover:underline">Sitemap</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/facebook.svg" alt="Facebook" class="w-5 h-5"></a>
+                    <a href="#" class="hover:text-white"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/twitter.svg" alt="Twitter" class="w-5 h-5"></a>
+                    <a href="#" class="hover:text-white"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/youtube.svg" alt="YouTube" class="w-5 h-5"></a>
+                    <a href="#" class="hover:text-white"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/pinterest.svg" alt="Pinterest" class="w-5 h-5"></a>
+                    <a href="#" class="hover:text-white"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/instagram.svg" alt="Instagram" class="w-5 h-5"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+<div class="scrolling-ticker">
+    <div class="ticker-content" id="tickerContent">
+        <span class="mx-4" id="location1"></span>
+        <span class="mx-4" id="date1"></span>
+        <span class="mx-4" id="location2"></span>
+        <span class="mx-4" id="date2"></span>
+    </div>
+</div>
+
+<script src="./img/https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navContent = document.getElementById('nav-content');
+
+  navToggle.addEventListener('click', () => {
+    navContent.classList.toggle('hidden');
+  });
+
+  
+    // toggle ends
+
+    // Visitor count logic
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     let visitorCount = localStorage.getItem('visitorCount');
+    //     if (!visitorCount) {
+    //         visitorCount = 0;
+    //         localStorage.setItem('visitorCount', visitorCount);
+    //     } else {
+    //         visitorCount = parseInt(visitorCount, 10) + 1;
+    //         localStorage.setItem('visitorCount', visitorCount);
+    //     }
+    //     document.getElementById('visitor-count').innerText = `Visitors: ${visitorCount}`;
+    // });
+//    visitor count
+document.querySelectorAll('.details-button').forEach(button => {
+        button.addEventListener('click', (event) => {
+          const card = event.target.closest('.card');
+          const imgSrc = card.querySelector('img').src;
+          const title = card.querySelector('h3').innerText;
+          const price = card.querySelector('p').innerText;
+
+          document.getElementById('popup-img').src = imgSrc;
+          document.getElementById('popup-title').innerText = title;
+          document.getElementById('popup-price').innerText = price;
+
+          document.getElementById('popup').classList.remove('hidden');
+        });
+      });
+
+      document.getElementById('close-popup').addEventListener('click', () => {
+        document.getElementById('popup').classList.add('hidden');
+      });
+    //   pop up
+
+    // cart
+    function addToCart() {
+            window.alert(' Added Successfuly');
+          }
+          document.addEventListener("DOMContentLoaded", () => {
+            const locationElement1 = document.getElementById('location1');
+            const dateElement1 = document.getElementById('date1');
+            const locationElement2 = document.getElementById('location2');
+            const dateElement2 = document.getElementById('date2');
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const locationText = `Location: ${data.city}, ${data.countryName}`;
+                            locationElement1.textContent = locationText;
+                            locationElement2.textContent = locationText;
+                        })
+                        .catch(() => {
+                            locationElement1.textContent = 'Location: Unavailable';
+                            locationElement2.textContent = 'Location: Unavailable';
+                        });
+                });
+            } else {
+                locationElement1.textContent = 'Location: Not Supported';
+                locationElement2.textContent = 'Location: Not Supported';
+            }
+
+            const currentDate = new Date().toLocaleDateString();
+            dateElement1.textContent = `Date: ${currentDate}`;
+            dateElement2.textContent = `Date: ${currentDate}`;
+        });
+</script>
+
+
+</body>
+</html>
